@@ -68,3 +68,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Firebase setup
+
+Install firebase
+create signin component
+import in app.js file
+add link to into navigation component for sign in link
+create firebase utils file
+generate firebase configuration code from firebase
+import libraries from firebase auth
+create provider from googleauthprovider
+setcustomparameter so that user has to select an account
+create auth instance from getAuth
+export signinwithpopup and pass auth and provider in it
+goto google console->authentication tab->signin method->google->Enable->give project support email->save
+signin component-> import signInWithGooglePopup
+create button for google login popup to get the access token
+whenever user get authenticates we also create a record of them inside of firestore
+firebase - create database->start in production mode->next->choose location
+firebase rules->allow read,write switch false to true
+import libraries from firestore
+create db instance from getFireStore();
+we want some fn that will take the data or getting from the authentication service and store that inside of firestore
+we need to see if there is an existing document reference
